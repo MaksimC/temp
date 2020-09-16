@@ -1,0 +1,11 @@
+{
+    "policies": {
+        "BlockAboutConfig": true,
+        "Homepage": {
+            "URL": "http://example.com/",
+            "Locked": true | false,
+            "StartPage":   "homepage-locked"
+          }
+
+    }
+}
