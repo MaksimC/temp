@@ -9,7 +9,7 @@ gsettings set org.gnome.desktop.wm.keybindings switch-windows []
 gsettings set org.gnome.desktop.wm.keybindings close []
 
 #change alt+space to ctrl+alt+c for closing browser
-gsettings set org.gnome.desktop.wm.keybindings activate-window-menu "['Ctrl<Alt><C>']"
+gsettings set org.gnome.desktop.wm.keybindings activate-window-menu "['<Ctrl><Alt>c']"
 
 #block alt+f2
 gsettings set org.gnome.desktop.wm.keybindings panel-run-dialog []
@@ -29,8 +29,7 @@ gsettings set org.gnome.desktop.screensaver lock-enabled false
 #### remove Firefox shortcuts with empty system shortcuts module ####
 
 #create new custom system shortcuts, that will override firefox shortcuts
-gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings
-"['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/new-window/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/new-private-window/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/addons/',  '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/open-file/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/save-page/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/exit/']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/new-window/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/new-private-window/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/addons/',  '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/open-file/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/save-page/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/exit/']"
 
 ## set names for new custom system shortcuts
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/new-window/ name 'firefox-new-window'
