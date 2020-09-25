@@ -1,0 +1,97 @@
+---
+# vars file for elx-kiosk
+package_list:
+  - python
+  - python-psutil
+
+username: kiosk-user
+password: $6$Uyoa8ZNJWXcTB9$PC5a2MWa0pFI8uNpnrXaP5xNATNDnRRrzZo215tRh0G0t4JjsJMzwqm4RaEj1r2HJBLIrmuGUTZtKAjZPeX/70
+
+taskbar_settings:
+  - { key: "/org/gnome/shell/extensions/dash-to-dock/dock-fixed",
+      value: "'false'" }
+  - { key: "/org/gnome/shell/extensions/dash-to-dock/autohide",
+      value: "'true'" }
+  - { key: /org/gnome/shell/extensions/dash-to-dock/intellihide",
+      value: "'false'" }
+
+system_shortcuts:
+  - { key: "/org/gnome/desktop/wm/keybindings/switch-windows",
+      value: "['']" } # alt+tab
+  - { key: "/org/gnome/desktop/wm/keybindings/close",
+      value: "['']" } # alt+F4
+  - { key: "/org/gnome/desktop/wm/keybindings/activate-window-menu",
+      value: "['<Ctrl><Alt>c']" } # replace alt+space to ctrl+alt+c
+  - { key: "/org/gnome/desktop/wm/keybindings/panel-run-dialog",
+      value: "['']" } # alt+F2
+  - { key: "/org/gnome/settings-daemon/plugins/media-keys/terminal",
+      value: "['']" } # ctrl+alt+T
+
+custom_keybindings_list: "[
+      '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/new-window/',
+      '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/new-private-window/',
+      '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/addons/',
+      '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/open-file/',
+      '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/save-page/',
+      '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/exit/'
+      ]"
+
+custom_keybindings_names:
+  - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybinding:
+            /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/new-window/name",
+      value: "'firefox-new-window'"}
+  - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybinding:
+            /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/new-private-window/name",
+      value: "'firefox-new-private-window'" }
+  - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybinding:
+            /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/addons/name",
+      value: "'firefox-addons'" }
+  - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybinding:
+            /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/open-file/name",
+      value: "'firefox-open-file'" }
+  - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybinding:
+            /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/save-page/name",
+      value: "'firefox-save-page'" }
+  - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybinding:
+            /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/exit/name",
+      value: "'firefox-exit'" }
+
+custom_keybindings_commands:
+  - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybinding:
+            /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/new-window/command",
+      value: "'/bin/false'" }
+  - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybinding:
+            /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/new-private-window/command",
+      value: "'/bin/false'" }
+  - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybinding:
+            /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/addons/command",
+      value: "'/bin/false'" }
+  - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybinding:
+            /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/open-file/command",
+      value: "'/bin/false'" }
+  - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybinding:
+            /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/save-page/command",
+      value: "'/bin/false'" }
+  - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybinding:
+            /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/exit/command",
+      value: "'/bin/false'" }
+
+custom_keybindings_keys:
+  - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybinding:
+            /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/new-window/binding",
+      value: "['<Ctrl>n']" }
+  - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybinding:
+            /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/new-private-window/binding",
+      value: "['<Ctrl><Shift>p']" }
+  - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybinding:
+            /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/addons/binding",
+      value: "['<Ctrl><Shift>a']" }
+  - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybinding:
+            /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/open-file/binding",
+      value: "['<Ctrl>o']" }
+  - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybinding:
+            /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/save-page/binding",
+      value: "['<Ctrl>s']" }
+  - { key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybinding:
+            /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/exit/binding",
+      value: "['<Ctrl>q']" }
